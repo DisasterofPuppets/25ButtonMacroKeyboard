@@ -233,8 +233,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F13);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F13);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;                       
 
         case 'D':
@@ -245,8 +245,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F14);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F14);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;                                                                            
 
         case 'E':
@@ -257,8 +257,9 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F15);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F15);
+            Keyboard.release(KEY_RIGHT_SHIFT);
+            
             break;    
 
         case 'F':
@@ -269,8 +270,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F16);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F16);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;    
 
         case 'G':
@@ -281,8 +282,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F17);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F17);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;    
 
         case 'H':
@@ -293,8 +294,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F18);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F18);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;    
 
         case 'I':
@@ -305,8 +306,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F19);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F19);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;    
 
         case 'J':
@@ -317,8 +318,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F20);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F20);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;       
 
         case 'K':
@@ -329,8 +330,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F21);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F21);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;  
 
         case 'L':
@@ -341,8 +342,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F22);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F22);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;  
 
         case 'M':
@@ -352,8 +353,9 @@ if (customKey)
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F23);
-            Keyboard.release(KEY_RIGHT_SHIFT);
+            delay(keypress);
             Keyboard.release(KEY_F23);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;  
 
         case 'N':
@@ -364,8 +366,8 @@ if (customKey)
             Keyboard.press(KEY_RIGHT_SHIFT); 
             Keyboard.press(KEY_F24);
             delay(keypress);
-            Keyboard.release(KEY_RIGHT_SHIFT);
             Keyboard.release(KEY_F24);
+            Keyboard.release(KEY_RIGHT_SHIFT);
             break;                                                                                                                       
 
         case 'O':
@@ -375,9 +377,9 @@ if (customKey)
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_ALT);
             Keyboard.press(KEY_F24);
-            delay(keypress);
-            Keyboard.release(KEY_RIGHT_ALT);
+            delay(keypress);            
             Keyboard.release(KEY_F24);
+            Keyboard.release(KEY_RIGHT_ALT);
             break;                                                                                                                                   
       }
     }
