@@ -25,10 +25,11 @@ unsigned long interval = 900000; //
 
 int selected = 666;
 
-bool camState = true;
+bool camState = false;
 bool mState = false;
 int camButton = 0;
 int mButton = 0;
+
 
 const byte ROWS = 5;
 const byte COLS = 5;
@@ -103,8 +104,9 @@ if (selected == 666) // Before variable is set, play animation (ie power on)
     // Clears ALL LEDS
     //Set LED above last selected button
     leds[selected] = CRGB::Blue; 
-    //Sets the standard key colour back on (too quick to see the clear)
+   //Sets the standard key colour back on (too quick to see the clear)
     FastLED.show(); 
+    
     // shows updated LED settings
 
 /* To set button LEDs to stay off simply remove the 'selected' values in the custom keyboard definitions
@@ -136,7 +138,7 @@ when the main script runs)
           if (camButton >= 2 or camButton <=0) 
           {
 
-            leds[10] = CRGB::Red; 
+            leds[10] = CRGB::Green; 
             // you need to fill in the LED number as we don't give it a 'selected' value in the custom definitions
             FastLED.show();
             camState = false;
@@ -145,7 +147,7 @@ when the main script runs)
           else if (camButton <= 1)
           {
 
-            leds[10] = CRGB::Green;
+            leds[10] = CRGB::Red;
             FastLED.show();
           }    
 
@@ -155,7 +157,7 @@ when the main script runs)
  
           if (mButton >= 2 or mButton <=0) 
           {
-            leds[24] = CRGB::Black;
+ 
             leds[24] = CRGB::Green; 
             FastLED.show();
             mState = true;
@@ -163,7 +165,7 @@ when the main script runs)
           }
           else if (mButton <= 1)
           {
-            leds[24] = CRGB::Black;
+   
             leds[24] = CRGB::Red;
             FastLED.show();
           }    
@@ -273,7 +275,9 @@ if (customKey)
 
         case '8':
         
-           // selected = 8; // you are using this for previous track
+            leds[8] = CRGB::Aqua;
+            leds[selected] = CRGB::Blue;  
+            FastLED.show(); // you are using this for previous track
             Serial.print("You selected F21, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_F21);
@@ -283,7 +287,9 @@ if (customKey)
 
         case '9':
         
-           // selected = 9; // you are using this for next track
+            leds[9] = CRGB::Aqua;
+            leds[selected] = CRGB::Blue;  
+            FastLED.show();// you are using this for next track
             Serial.print("You selected F22, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_F22);
@@ -338,7 +344,9 @@ if (customKey)
 
         case 'E':
         
-            selected = 14;
+            leds[14] = CRGB::HotPink; // Play Button
+            leds[selected] = CRGB::Blue;  
+            FastLED.show();
             Serial.print("You selected F15 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -398,7 +406,9 @@ if (customKey)
 
         case 'J':
         
-           // selected = 19;  // you are using this for wav
+            leds[19] = CRGB::HotPink;
+            leds[selected] = CRGB::Blue;  
+            FastLED.show();
             Serial.print("You selected F20 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -410,7 +420,9 @@ if (customKey)
 
         case 'K':
         
-            //selected = 20;  // you are using this for wav
+            leds[20] = CRGB::HotPink;
+            leds[selected] = CRGB::Blue; 
+            FastLED.show();
             Serial.print("You selected F21 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -422,7 +434,9 @@ if (customKey)
 
         case 'L':
         
-            //selected = 21; // you are using this for wav
+            leds[21] = CRGB::HotPink;
+            leds[selected] = CRGB::Blue; 
+            FastLED.show();
             Serial.print("You selected F22 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -434,7 +448,9 @@ if (customKey)
 
         case 'M':
         
-            //selected = 22;  // you are using this for wav
+            leds[22] = CRGB::HotPink;
+            leds[selected] = CRGB::Blue; 
+            FastLED.show();
             Serial.print("You selected F23 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -445,7 +461,9 @@ if (customKey)
 
         case 'N':
         
-            //selected = 23;  // you are using this for wav
+            leds[23] = CRGB::HotPink;
+            leds[selected] = CRGB::Blue;
+            FastLED.show();// you are using this for wav
             Serial.print("You selected F24 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
