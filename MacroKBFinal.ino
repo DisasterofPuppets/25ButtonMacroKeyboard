@@ -19,7 +19,7 @@ bool camState = false;
 bool mState = false;
 int camButton = 0;
 int mButton = 0;
-
+int anidelay = 20;
 
 const byte ROWS = 5;
 const byte COLS = 5;
@@ -267,9 +267,12 @@ if (customKey)
             break;
 
         case '8':
-        
-            prudy(8);  
+
+            leds[8] = CRGB::HotPink; // PREV
+            leds[selected] = CRGB::Blue;  
+            //prudy(8);  
             //you are using this for previous track
+            FastLED.show();
             Serial.print("You selected F21, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_F21);
@@ -278,8 +281,11 @@ if (customKey)
             break;
 
         case '9':
-        
-            prudy(9);
+
+            leds[9] = CRGB::HotPink; // NEXT
+            leds[selected] = CRGB::Blue; 
+            //prudy(9);
+            FastLED.show();
             Serial.print("You selected F22, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_F22);
@@ -291,7 +297,7 @@ if (customKey)
             
             camState = true;      // you are using this for webcam on / off
             camButton = camButton + 1;
-            prudy(10);
+            //prudy(10);
             Serial.print("You selected F23, selected is  ");
             Serial.println(selected); 
             Keyboard.press(KEY_F23);
@@ -340,7 +346,7 @@ if (customKey)
         
             leds[14] = CRGB::HotPink; // Play Button
             leds[selected] = CRGB::Blue;  
-            prudy(14);
+            //prudy(14);
             FastLED.show();
             Serial.print("You selected F15 + Shift, selected is  ");
             Serial.println(selected);
@@ -483,7 +489,7 @@ if (customKey)
          //   selected = 24;  
             mState = true;
             mButton = mButton +1;     
-            prudy(24); 
+            //prudy(24); 
             Serial.print("You selected F21 + Alt, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_ALT);
@@ -518,7 +524,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+4] = CRGB::Yellow;
@@ -532,7 +538,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+4] = CRGB::Green;
@@ -546,7 +552,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;      
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+4] = CRGB::Aqua;
@@ -560,7 +566,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button+4] = CRGB::Yellow;
@@ -574,7 +580,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }        
   }              
@@ -593,7 +599,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+4] = CRGB::Yellow;
@@ -604,7 +610,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+4] = CRGB::Green;
@@ -616,7 +622,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;      
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+4] = CRGB::Aqua;
@@ -628,7 +634,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button+4] = CRGB::Yellow;
@@ -640,7 +646,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
 
@@ -657,7 +663,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button-6] = CRGB::Yellow;
@@ -668,7 +674,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button-6] = CRGB::Green;
@@ -680,7 +686,7 @@ void prudy(int button)
     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button-6] = CRGB::Aqua;
@@ -691,7 +697,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Red;
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button-6] = CRGB::Yellow;
@@ -702,7 +708,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Blue;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
 
@@ -720,7 +726,7 @@ void prudy(int button)
 
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+5] = CRGB::Yellow;
@@ -732,7 +738,7 @@ void prudy(int button)
 
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+5] = CRGB::Green;
@@ -744,7 +750,7 @@ void prudy(int button)
   
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+5] = CRGB::Aqua;
@@ -756,7 +762,7 @@ void prudy(int button)
 
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button+5] = CRGB::Yellow;
@@ -768,7 +774,7 @@ void prudy(int button)
  
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
         //Right Row
@@ -784,7 +790,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+4] = CRGB::Yellow;
@@ -795,7 +801,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+4] = CRGB::Green;
@@ -807,7 +813,7 @@ void prudy(int button)
     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+4] = CRGB::Aqua;
@@ -819,7 +825,7 @@ void prudy(int button)
 
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button+4] = CRGB::Yellow;
@@ -830,7 +836,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;
                           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
 
@@ -844,7 +850,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+6] = CRGB::Yellow;
@@ -852,7 +858,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+6] = CRGB::Green;
@@ -860,7 +866,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;      
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+6] = CRGB::Aqua;
@@ -868,7 +874,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button+6] = CRGB::Yellow;
@@ -877,7 +883,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
       //Top Right Corner
@@ -891,7 +897,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button+4] = CRGB::Yellow;
@@ -900,7 +906,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button+4] = CRGB::Green;
@@ -909,7 +915,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;      
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button+4] = CRGB::Aqua;
@@ -942,7 +948,7 @@ void prudy(int button)
 
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
                 leds[button-4] = CRGB::Yellow;
@@ -951,7 +957,7 @@ void prudy(int button)
                 leds[button-5] = CRGB::Red;
 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
                 leds[button-4] = CRGB::Green;
@@ -961,7 +967,7 @@ void prudy(int button)
    
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
                 leds[button-4] = CRGB::Aqua;
@@ -971,7 +977,7 @@ void prudy(int button)
 
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button-4] = CRGB::Yellow;
@@ -981,7 +987,7 @@ void prudy(int button)
                 leds[button+5] = CRGB::Blue;     
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
       //Bottom Right Corner
@@ -997,7 +1003,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Red;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Blue;
 
@@ -1010,7 +1016,7 @@ void prudy(int button)
 
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Red;
 
@@ -1021,7 +1027,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Blue; 
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Yellow;
 
@@ -1031,7 +1037,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Red;
                 
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
                 leds[button] = CRGB::Green;
                 leds[button-6] = CRGB::Yellow;
@@ -1040,7 +1046,7 @@ void prudy(int button)
                 leds[button-1] = CRGB::Blue;
           
                 FastLED.show();
-                delay(120);
+                delay(anidelay);
           
               }    
 }
