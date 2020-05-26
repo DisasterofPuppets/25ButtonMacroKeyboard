@@ -180,6 +180,8 @@ if (customKey)
      switch (customKey) 
      {
         case '0':
+
+            // LIVE
             selected = 0;   
             prudy(0);
             Serial.print("You selected F13, selected is  ");
@@ -190,7 +192,8 @@ if (customKey)
             break;
             
         case '1':
-        
+
+            // Craft Desk
             selected = 1;  
             prudy(1);
             Serial.print("You selected F14, selected is  ");
@@ -201,8 +204,9 @@ if (customKey)
             break;   
             
         case '2':
-        
-            selected = 2; 
+
+            // Raid
+            //selected = 2; 
             prudy(2);
             Serial.print("You selected F15, selected is  ");
             Serial.println(selected);            
@@ -212,8 +216,9 @@ if (customKey)
             break;
 
         case '3':
-        
-            selected = 3;
+
+            //Paintbrush *chatbot on/off
+            //selected = 3;
             prudy(3);
             Serial.print("You selected F16, selected is  ");
             Serial.println(selected);
@@ -223,7 +228,8 @@ if (customKey)
             break;
 
         case '4':
-        
+
+            //BRB
             selected = 4;
             prudy(4);
             Serial.print("You selected F17, selected is  ");
@@ -234,8 +240,9 @@ if (customKey)
             break;
 
         case '5':
-        
-            selected = 5;
+
+            //Logitech Toggle
+            //selected = 5;
             prudy(5);
             Serial.print("You selected F18, selected is  ");
             Serial.println(selected);
@@ -245,7 +252,8 @@ if (customKey)
             break;
 
         case '6':
-        
+
+            // Ending
             selected = 6;  
             prudy(6);
             Serial.print("You selected F19, selected is  ");
@@ -257,8 +265,9 @@ if (customKey)
 
         case '7':
 
+            // IVcam Toggle (no led)
             prudy(7);
-           // selected = 7; // you are using this for 360 privacy no light required
+            //selected = 7; 
             Serial.print("You selected F20, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_F20);
@@ -268,10 +277,9 @@ if (customKey)
 
         case '8':
 
-            leds[8] = CRGB::HotPink; // PREV
-            leds[selected] = CRGB::Blue;  
-            //prudy(8);  
-            //you are using this for previous track
+            // RED *chatbot on/off
+            //selected = 8;  
+            prudy(8);
             FastLED.show();
             Serial.print("You selected F21, selected is  ");
             Serial.println(selected);
@@ -282,9 +290,9 @@ if (customKey)
 
         case '9':
 
-            leds[9] = CRGB::HotPink; // NEXT
-            leds[selected] = CRGB::Blue; 
-            //prudy(9);
+            // Doorprize
+            selected = 9;  
+            prudy(9);
             FastLED.show();
             Serial.print("You selected F22, selected is  ");
             Serial.println(selected);
@@ -294,8 +302,9 @@ if (customKey)
             break;
 
         case 'A':
-            
-            camState = true;      // you are using this for webcam on / off
+        
+            // Webcam Toggle
+            camState = true;      
             camButton = camButton + 1;
             //prudy(10);
             Serial.print("You selected F23, selected is  ");
@@ -306,8 +315,9 @@ if (customKey)
             break;        
 
         case 'B':
-            
-            selected = 11;
+        
+            // Character Animator / PuppetCam Toggle
+            //selected = 11;
             prudy(11);
             Serial.print("You selected F24, selected is  ");
             Serial.println(selected);
@@ -318,7 +328,8 @@ if (customKey)
 
         case 'C':
         
-            selected = 12;
+            //Unassigned
+            //selected = 12;
             prudy(12);
             Serial.print("You selected F13 + Shift, selected is  ");
             Serial.println(selected);
@@ -330,8 +341,9 @@ if (customKey)
             break;                       
 
         case 'D':
-        
-            selected = 13;
+
+            // Blue *chatbot on/off
+            //selected = 13;
             prudy(13);
             Serial.print("You selected F14 + Shift, selected is  ");
             Serial.println(selected);
@@ -344,10 +356,9 @@ if (customKey)
 
         case 'E':
         
-            leds[14] = CRGB::HotPink; // Play Button
-            leds[selected] = CRGB::Blue;  
-            //prudy(14);
-            FastLED.show();
+            // Unassigned  
+            //selected = 14;  
+            prudy(14);
             Serial.print("You selected F15 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -358,8 +369,9 @@ if (customKey)
             break;    
 
         case 'F':
-        
-            selected = 15;
+
+            // Soundboard
+            //selected = 15;
             prudy(15);
             Serial.print("You selected F16 + Shift, selected is  ");
             Serial.println(selected);
@@ -371,9 +383,10 @@ if (customKey)
             break;    
 
         case 'G':
-        
-            selected = 16;
-            prudy(16);
+
+            //BS
+            //selected = 16;
+            prudy(16);// 
             Serial.print("You selected F17 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -384,8 +397,9 @@ if (customKey)
             break;    
 
         case 'H':
-            
-            selected = 17;
+
+            //Stamp
+            //selected = 17;
             prudy(17);
             Serial.print("You selected F18 + Shift, selected is  ");
             Serial.println(selected);
@@ -397,8 +411,9 @@ if (customKey)
             break;    
 
         case 'I':
-        
-            selected = 18;
+
+            // GREEN *chatbot on/off
+            //selected = 18;
             prudy(18);
             Serial.print("You selected F19 + Shift, selected is  ");
             Serial.println(selected);
@@ -411,6 +426,7 @@ if (customKey)
 
         case 'J':
         
+            // Soundboard
             leds[19] = CRGB::HotPink;
             leds[selected] = CRGB::Blue; 
             prudy(19); 
@@ -426,6 +442,7 @@ if (customKey)
 
         case 'K':
         
+            // Soundboard
             leds[20] = CRGB::HotPink;
             prudy(20);
             leds[selected] = CRGB::Blue; 
@@ -441,6 +458,7 @@ if (customKey)
 
         case 'L':
         
+            // Soundboard
             leds[21] = CRGB::HotPink;
             leds[selected] = CRGB::Blue; 
             prudy(21);
@@ -456,6 +474,7 @@ if (customKey)
 
         case 'M':
         
+            // Soundboard
             leds[22] = CRGB::HotPink;
             leds[selected] = CRGB::Blue; 
             prudy(22);
@@ -471,10 +490,11 @@ if (customKey)
 
         case 'N':
         
+            // Soundboard
             leds[23] = CRGB::HotPink;
             leds[selected] = CRGB::Blue;
             prudy(23);
-            FastLED.show();// you are using this for wav
+            FastLED.show();
             Serial.print("You selected F24 + Shift, selected is  ");
             Serial.println(selected);
             Keyboard.press(KEY_RIGHT_SHIFT); 
@@ -485,7 +505,8 @@ if (customKey)
             break;                                                                                                                       
 
         case 'O':
-        
+
+            // MUTE Toggle
          //   selected = 24;  
             mState = true;
             mButton = mButton +1;     
