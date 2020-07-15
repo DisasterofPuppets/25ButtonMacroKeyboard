@@ -13,7 +13,7 @@ CRGB leds[NUM_LEDS];
 bool startupAnimations = true;
 bool buttonAnimations = true;
 uint8_t gHue = 0;
-int keypress = 20; // delay between keyboard press and release
+int keypress = 100; // delay between keyboard press and release
 int selected = 666;
 bool camState = false;
 bool mState = false;
