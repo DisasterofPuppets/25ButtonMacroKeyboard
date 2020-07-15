@@ -2,8 +2,6 @@
 #include <FastLED.h>
 #include <Keyboard.h>
 
-//******MAKE SURE YOU HAVE NUMLOCK ON OR THE LAST 13 KEYS WONT WORK
-
 bool gReverseDirection = false;
 #define NUM_LEDS 25
 #define DATA_PIN 2
@@ -333,8 +331,10 @@ if (customKey)
             //Unassigned
             //selected = 12;
             prudy(12);
-            Serial.print("You selected Numpad 1, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 1, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(225);
             delay(keypress);
             Keyboard.releaseAll();
@@ -345,8 +345,10 @@ if (customKey)
             // Blue *chatbot on/off
             //selected = 13;
             prudy(13);
-            Serial.print("You selected Numpad 2, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 2, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(226);
             delay(keypress);
             Keyboard.releaseAll();
@@ -357,8 +359,10 @@ if (customKey)
             // Unassigned  
             //selected = 14;  
             prudy(14);
-            Serial.print("You selected Numpad 3, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 3, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(227);
             delay(keypress);
             Keyboard.releaseAll();
@@ -369,8 +373,10 @@ if (customKey)
             // Soundboard
             //selected = 15;
             prudy(15);
-            Serial.print("You selected Numpad 4, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 4, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(228);
             delay(keypress);
             Keyboard.releaseAll();
@@ -381,8 +387,10 @@ if (customKey)
             //BS
             //selected = 16;
             prudy(16);// 
-            Serial.print("You selected Numpad 5, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 5, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(229);
             delay(keypress);
             Keyboard.releaseAll();
@@ -393,8 +401,10 @@ if (customKey)
             //Stamp
             //selected = 17;
             prudy(17);
-            Serial.print("You selected Numpad 6, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 6, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(230);
             delay(keypress);
             Keyboard.releaseAll();
@@ -405,8 +415,10 @@ if (customKey)
             // GREEN *chatbot on/off
             //selected = 18;
             prudy(18);
-            Serial.print("You selected Numpad 7, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 7, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(231);
             delay(keypress);
             Keyboard.releaseAll();
@@ -420,8 +432,10 @@ if (customKey)
             leds[selected] = CRGB::Blue; 
             prudy(19); 
             FastLED.show();
-            Serial.print("You selected Numpad 8, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 8, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(232);
             delay(keypress);
             Keyboard.releaseAll();
@@ -434,8 +448,10 @@ if (customKey)
             prudy(20);
             leds[selected] = CRGB::Blue; 
             FastLED.show();
-            Serial.print("You selected Numpad 9, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 9, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(233);
             delay(keypress);
             Keyboard.releaseAll();
@@ -448,8 +464,10 @@ if (customKey)
             leds[selected] = CRGB::Blue; 
             prudy(21);
             FastLED.show();
-            Serial.print("You selected Numpad 0, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad 0, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(234);
             delay(keypress);
             Keyboard.releaseAll();
@@ -462,8 +480,10 @@ if (customKey)
             leds[selected] = CRGB::Blue; 
             prudy(22);
             FastLED.show();
-            Serial.print("You selected Numpad -, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad -, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(222);
             delay(keypress);
             Keyboard.releaseAll();
@@ -476,8 +496,10 @@ if (customKey)
             leds[selected] = CRGB::Blue;
             prudy(23);
             FastLED.show();
-            Serial.print("You selected Numpad +, selected is  ");
+            Serial.print("You selected ALT + CTRL + Numpad +, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(223);
             delay(keypress);
             Keyboard.releaseAll();
@@ -492,6 +514,8 @@ if (customKey)
             //prudy(24); 
             Serial.print("You selected Numpad *, selected is  ");
             Serial.println(selected);
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_RIGHT_CTRL);
             Keyboard.press(221);
             delay(keypress);
             Keyboard.releaseAll();
