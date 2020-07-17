@@ -1,6 +1,8 @@
 # 25ButtonMacroKeyboard
 DIY Streamdeck / Macro Keyboard
 
+Uploaded to Arduino Leonardo 
+
 Tested and working on Arduino 1.8.12
 
 Video
