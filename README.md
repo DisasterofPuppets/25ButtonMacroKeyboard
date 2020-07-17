@@ -1,7 +1,12 @@
 # 25ButtonMacroKeyboard
 DIY Streamdeck / Macro Keyboard
 
-Uploaded to Arduino Leonardo 
+Uploaded to an Arduino pro micro. 
+
+These core libraries allow the 32u4 and SAMD based boards 
+(Leonardo, Esplora, Zero, Due and MKR Family) to appear 
+as a native Mouse and/or Keyboard to a connected computer.
+
 
 Tested and working on Arduino 1.8.12
 
